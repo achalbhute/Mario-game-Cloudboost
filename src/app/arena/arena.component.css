@@ -1,0 +1,15 @@
+.box{
+    border: 1px solid black;
+    height: 50px;
+    width : 50px;
+}
+
+.mario {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+.outer{
+    position: relative;
+}

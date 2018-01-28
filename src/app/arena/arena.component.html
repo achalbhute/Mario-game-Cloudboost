@@ -1,0 +1,25 @@
+<div class="container outer">
+    <h1>
+        Maze problem!
+      </h1>
+  <hr>
+  <div class="row" style='position:relative'>
+    <!-- Mario -->
+    <ng-container>
+      <img class="img-responsive mario" src="../../assets/images/mario.jpg" [ngStyle]="{'left':marioX*50+'px','top':marioY*50+'px'}">
+    </ng-container>
+    <!-- MarioEnd -->
+    <div *ngFor="let row of rows; let i=index">
+      <div *ngFor="let col of columns; let j=index">
+        <div class="box">
+            <ng-container *ngIf="princy[getCords(i,j)] == true; else elseBlock">
+                <app-princess></app-princess>
+              </ng-container>
+              <ng-template #elseBlock>&nbsp;</ng-template>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
